@@ -1,0 +1,16 @@
+{
+	"main_script": "main.js",
+	"icon": "finals.jpg",
+	"width": 1000,
+	"height": 3000,
+	"dependencies": ["d3.min.js", "moment-with-locales.js", "readable-range.js"],
+	"load": {
+		"value": 4
+	},
+	"title": "Final Countdown",
+	"version": "0.0.1",
+	"description": "It's the final countdown for Final Examinations",
+	"keywords": ["sage2", "finals", "exams"],
+	"author": "Chase Lee <clee231@uic.edu>",
+	"license": "MIT License"
+}

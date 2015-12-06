@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<script src="angular.min.js" charset="utf-8"></script>
+		<script src="angular-timer.min.js" charset="utf-8"></script>
+		<script src="moment-with-locales.js" charset="utf-8"></script>
+		<script src="readable-range.js" charset="utf-8"></script>
+		<script src="humanize-duration.js" charset="utf-8"></script>
+		<script src="anglist.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body ng-app="finalscountdown">
+		<div ng-controller="listingCtrl">
+			<div class="classenclosed" ng-repeat="$item in model |  orderObjectBy: 'finalStart' ">
+				<div class="classhighlight" ng-class="$item.color">
+					<h1>{{$item.courseName}}</h1>
+					<h3>{{$item.courseNum}}</h3>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<p>{{$item.stateText}}</p>
+					<h2><timer end-time="$item.timedur" max-time-unit="'hour'" interval="1000" finish-callback="timerfinished($item.id)">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}</timer></h2>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+<button ng-click="startTimer()" ng-disabled="timerRunning">Start Timers</button>
+
+		</div>
+		<!-- <script src="main-nonsage.js" charset="utf-8"></script> -->
+		<!-- Non-standard blocks -->
+		<div class="classenclosed large">
+				<div class="classhighlight pending large">
+					<h1>Fall 2015 Graduation</h1>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<h1><timer end-time="1449883800000" max-time-unit="'hour'" interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}</timer></h1>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+
+	</body>
+</html>

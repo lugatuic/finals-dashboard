@@ -1,0 +1,81 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}
+
+.classhighlight {
+	width: 5em;
+	height: 5em;
+	background-color: #aaa;
+	padding: 1em;
+	vertical-align: middle;
+	text-align: center;
+	float: left;
+}
+
+.classenclosed {
+	width: 40em;
+	box-shadow: 3px 3px 1px #eee;
+	display: inline-block;
+	margin: 1em;
+	background-color: #fff;
+}
+
+.classinfo {
+	margin-left: 1em;
+}
+
+.classhighlight h3 {
+	font-size: 2em;
+}
+
+.waiting {
+	background-color: #33cc33;
+}
+
+.pending {
+	background-color: #ff9933;
+}
+
+.ended {
+	background-color: #e60000;	
+}
+
+.large {
+	width: 80em;
+}
+
+.large h1 {
+	text-align: center;
+}
+
+.classhighlight.pending.large h1, .classhighlight.waiting.large h1 {
+	font-weight: 500;
+	font-size: 5em;
+	font-family: 'Pacifico';
+	line-height: 1em;
+}
+
+.classenclosed.large .classinfo h1 {
+	font-size: 5em;
+}
+
+.classenclosed.large, .classhighlight.large {
+	margin: 0 0 0 -0.3em;
+	width: 100%;
+}

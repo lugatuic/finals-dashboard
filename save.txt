@@ -1,0 +1,25 @@
+		<!-- Default Countdown -->
+			<div class="classenclosed">
+				<div class="classhighlight">
+					<h1>CS</h1>
+					<h3>107</h3>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<p>Scheduled Time:</p>
+					<h2>00:00:00</h2>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+
+			<!-- Happening Now-->
+			<div class="classenclosed">
+				<div class="classhighlight">
+					<h1>CS</h1>
+					<h3>107</h3>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<p>Duration Left:</p>
+					<h2><timer /></h2>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+
+
