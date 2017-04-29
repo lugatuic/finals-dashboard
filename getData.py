@@ -18,6 +18,10 @@ with open(sys.argv[1], 'r') as infile:
             courseName = col1[0]
             courseNum = col1[1]
             crn = col1[3]
+            try:
+                newCrn = int(crn)
+            except ValueError:
+                crn = "0"
             col1 = row[0].split(" - ")
             classTime = ""
             if (len(col1) > 2):
