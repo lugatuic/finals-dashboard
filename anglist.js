@@ -4,58 +4,70 @@ app.controller('listingCtrl', function ($scope, $interval) {
 
 	$scope.mydata = [
 //{"courseName": "CS", "courseNum": 107, "CRN": "10634", "classTime": "4:00PM MWF", "finalStart": new Date(2015,11,7,3,30,0,0), "finalEnd": new Date(2015,11,7,5,30,0,0), "finalLocation": "2LCC", "finalRoom": "C3"},
-{"courseName": "CS", "courseNum": 107, "CRN": 17412, "classTime": " 11:00 AM TR", "finalStart": new Date(2016,4,2,10,30,0,0), "finalEnd": new Date(2016,4,2,12,30,0,0), "finalLocation": "2LCA; 2LCD", "finalRoom": "A002, A003; D002"},
-{"courseName": "CS", "courseNum": 109, "CRN": 19466, "classTime": " 02:00 PM MW", "finalStart": new Date(2016,4,4,13,0,0,0), "finalEnd": new Date(2016,4,2,15,0,0,0), "finalLocation": "2LCA; 2LCE", "finalRoom": "A001; E101"},
-{"courseName": "CS", "courseNum": 111, "CRN": 34013, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2LCC; 2LCD", "finalRoom": "C006; D005"},
-{"courseName": "CS", "courseNum": 141, "CRN": 34447, "classTime": " 01:00 PM MWF", "finalStart": new Date(2016,4,2,13,0,0,0), "finalEnd": new Date(2016,4,2,15,0,0,0), "finalLocation": "2LCA", "finalRoom": "A001"},
-{"courseName": "CS", "courseNum": 151, "CRN": 34014, "classTime": " 12:00 PM MWF", "finalStart": new Date(2016,4,3,8,0,0,0), "finalEnd": new Date(2016,4,3,10,0,0,0), "finalLocation": "2BSB", "finalRoom": "140, 145"},
-{"courseName": "CS", "courseNum": 201, "CRN": 17418, "classTime": " 12:30 PM TR, 12:00 PM F", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2BH", "finalRoom": "304"},
-{"courseName": "CS", "courseNum": 211, "CRN": 34456, "classTime": " 10:00 AM F", "finalStart": new Date(2016,4,6,10,30,0,0), "finalEnd": new Date(2016,4,6,12,30,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
-{"courseName": "CS", "courseNum": 251, "CRN": 34460, "classTime": " 11:00 AM MWF", "finalStart": new Date(2016,4,5,10,30,0,0), "finalEnd": new Date(2016,4,5,12,30,0,0), "finalLocation": "2LCD", "finalRoom": "D004, D005"},
-{"courseName": "CS", "courseNum": 261, "CRN": 34463, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
-{"courseName": "CS", "courseNum": 301, "CRN": 17422, "classTime": " 01:00 PM MWF", "finalStart": new Date(2016,4,2,0,0,0,0), "finalEnd": new Date(2016,4,2,0,0,0,0), "finalLocation": "2LCC; 2LCF", "finalRoom": "C004; F003"},
-{"courseName": "CS", "courseNum": 341, "CRN": 34723, "classTime": " 03:00 PM MWF", "finalStart": new Date(2016,4,2,0,0,0,0), "finalEnd": new Date(2016,4,2,0,0,0,0), "finalLocation": "2LCD", "finalRoom": "D005"},
-{"courseName": "CS", "courseNum": 342, "CRN": 35976, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2SES", "finalRoom": "250"},
-{"courseName": "CS", "courseNum": 361, "CRN": 36306, "classTime": " 12:30 PM TR", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2LCE", "finalRoom": "E101"},
-{"courseName": "CS", "courseNum": 362, "CRN": 36309, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2LCE", "finalRoom": "E101"},
-{"courseName": "CS", "courseNum": 377, "CRN": 36312, "classTime": " 12:00 PM MW", "finalStart": new Date(2016,4,3,8,0,0,0), "finalEnd": new Date(2016,4,3,10,0,0,0), "finalLocation": "2LH", "finalRoom": "312"},
-{"courseName": "CS", "courseNum": 377, "CRN": 38111, "classTime": " 02:00 PM MW", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2LH", "finalRoom": "210"},
-{"courseName": "CS", "courseNum": 385, "CRN": 17428, "classTime": " 03:30 PM TR", "finalStart": new Date(2016,4,6,13,0,0,0), "finalEnd": new Date(2016,4,6,15,0,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
-{"courseName": "CS", "courseNum": 401, "CRN": 17454, "classTime": " 11:00 AM MWF", "finalStart": new Date(2016,4,5,10,30,0,0), "finalEnd": new Date(2016,4,5,12,30,0,0), "finalLocation": "2BSB", "finalRoom": "319"},
-{"courseName": "CS", "courseNum": 401, "CRN": 17455, "classTime": " 12:30 PM TR", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2LCF", "finalRoom": "F001"},
-{"courseName": "CS", "courseNum": 411, "CRN": 38549, "classTime": " 10:00 AM MWF", "finalStart": new Date(2016,4,6,10,30,0,0), "finalEnd": new Date(2016,4,6,12,30,0,0), "finalLocation": "2LCC", "finalRoom": "C004"},
-{"courseName": "CS", "courseNum": 412, "CRN": 38114, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
-{"courseName": "CS", "courseNum": 421, "CRN": 28653, "classTime": " 12:30 PM TR", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2SES", "finalRoom": "130"},
-{"courseName": "CS", "courseNum": 422, "CRN": 19650, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
-{"courseName": "CS", "courseNum": 426, "CRN": 27145, "classTime": " 03:00 PM F", "finalStart": new Date(2016,4,2,8,0,0,0), "finalEnd": new Date(2016,4,2,10,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
-{"courseName": "CS", "courseNum": 440, "CRN": 29904, "classTime": " 12:00 PM MWF", "finalStart": new Date(2016,4,3,8,0,0,0), "finalEnd": new Date(2016,4,3,10,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
-{"courseName": "CS", "courseNum": 442, "CRN": 33785, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
-{"courseName": "CS", "courseNum": 450, "CRN": 17432, "classTime": " 01:00 PM MWF", "finalStart": new Date(2016,4,2,13,0,0,0), "finalEnd": new Date(2016,4,2,15,0,0,0), "finalLocation": "2SES", "finalRoom": "138"},
-{"courseName": "CS", "courseNum": 466, "CRN": 26694, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2SES", "finalRoom": "238"},
-{"courseName": "CS", "courseNum": 469, "CRN": 17434, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2BH", "finalRoom": "305"},
-{"courseName": "CS", "courseNum": 473, "CRN": 26540, "classTime": " 02:00 PM MWF", "finalStart": new Date(2016,4,4,13,0,0,0), "finalEnd": new Date(2016,4,4,15,0,0,0), "finalLocation": "2LCF", "finalRoom": "F003"},
-{"courseName": "CS", "courseNum": 474, "CRN": 38616, "classTime": " 11:00 AM TR", "finalStart": new Date(2016,4,2,10,30,0,0), "finalEnd": new Date(2016,4,2,12,30,0,0), "finalLocation": "2ERF", "finalRoom": "1003, 1023"},
-{"courseName": "CS", "courseNum": 478, "CRN": 37633, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2LCF", "finalRoom": "F003"},
-{"courseName": "CS", "courseNum": 480, "CRN": 17438, "classTime": " 05:30 PM TR", "finalStart": new Date(2016,4,5,15,30,0,0), "finalEnd": new Date(2016,4,5,17,30,0,0), "finalLocation": "2LCC", "finalRoom": "C003"},
-{"courseName": "CS", "courseNum": 486, "CRN": 37268, "classTime": " 04:00 PM MWF", "finalStart": new Date(2016,4,3,15,30,0,0), "finalEnd": new Date(2016,4,3,17,30,0,0), "finalLocation": "2LH", "finalRoom": "312"},
-{"courseName": "CS", "courseNum": 489, "CRN": 38327, "classTime": " 03:30 PM TR", "finalStart": new Date(2016,4,6,13,0,0,0), "finalEnd": new Date(2016,4,6,15,0,0,0), "finalLocation": "2BSB", "finalRoom": "335"},
-{"courseName": "CS", "courseNum": 491, "CRN": 3726830476 , "classTime": "NA", "finalStart": new Date(2016,4,2,18,0,0,0), "finalEnd": new Date(2016,4,2,20,0,0,0), "finalLocation": "LCD", "finalRoom": "D2"},
-{"courseName": "CS", "courseNum": 491, "CRN": 30475, "classTime": " 04:00 PM T", "finalStart": new Date(2016,4,0,0,0,0,0), "finalEnd": new Date(2016,4,0,0,0,0,0), "finalLocation": "", "finalRoom": ""},
-{"courseName": "CS", "courseNum": 491, "CRN": 30476, "classTime": " 02:30 PM R", "finalStart": new Date(2016,4,0,0,0,0,0), "finalEnd": new Date(2016,4,0,0,0,0,0), "finalLocation": "", "finalRoom": ""},
-{"courseName": "CS", "courseNum": 501, "CRN": 33788, "classTime": " 03:30 PM TR", "finalStart": new Date(2016,4,6,13,0,0,0), "finalEnd": new Date(2016,4,6,0,0,0,0), "finalLocation": "2LCA", "finalRoom": "A003"},
-{"courseName": "CS", "courseNum": 502, "CRN": 23104, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,0,0,0,0), "finalLocation": "2LCA", "finalRoom": "A004"},
-{"courseName": "CS", "courseNum": 511, "CRN": 17442, "classTime": " 11:00 AM MWF", "finalStart": new Date(2016,4,5,10,30,0,0), "finalEnd": new Date(2016,4,5,12,30,0,0), "finalLocation": "2SES", "finalRoom": "170"},
-{"courseName": "CS", "courseNum": 514, "CRN": 38618, "classTime": " 12:00 PM MWF", "finalStart": new Date(2016,4,3,8,0,0,0), "finalEnd": new Date(2016,4,3,10,0,0,0), "finalLocation": "2SES", "finalRoom": "238"},
-{"courseName": "CS", "courseNum": 523, "CRN": 38501, "classTime": " 09:30 AM TR", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "2ETMSW", "finalRoom": "2219"},
-{"courseName": "CS", "courseNum": 553, "CRN": 31243, "classTime": " 02:00 PM TR", "finalStart": new Date(2016,4,4,15,30,0,0), "finalEnd": new Date(2016,4,4,17,30,0,0), "finalLocation": "2TH", "finalRoom": "100"},
-{"courseName": "CS", "courseNum": 569, "CRN": 27021, "classTime": " 11:00 AM TR", "finalStart": new Date(2016,4,2,10,30,0,0), "finalEnd": new Date(2016,4,2,12,30,0,0), "finalLocation": "2LCA", "finalRoom": "A005"},
-{"courseName": "CS", "courseNum": 581, "CRN": 28655, "classTime": " 02:00 PM MW", "finalStart": new Date(2016,4,4,13,0,0,0), "finalEnd": new Date(2016,4,4,15,0,0,0), "finalLocation": "2LCA", "finalRoom": "A004"},
-{"courseName": "CS", "courseNum": 588, "CRN": 38552, "classTime": " 03:00 PM MWF", "finalStart": new Date(2016,4,2,8,0,0,0), "finalEnd": new Date(2016,4,2,10,0,0,0), "finalLocation": "2LH", "finalRoom": "312"},
-{"courseName": "CS", "courseNum": 594, "CRN": 33648, "classTime": " 03:30 PM TR", "finalStart": new Date(2016,4,6,13,0,0,0), "finalEnd": new Date(2016,4,6,15,0,0,0), "finalLocation": "2TH", "finalRoom": "208"},
-{"courseName": "CS", "courseNum": 594, "CRN": 33792, "classTime": " 03:30 PM TR", "finalStart": new Date(2016,4,6,13,0,0,0), "finalEnd": new Date(2016,4,6,15,0,0,0), "finalLocation": "2TH", "finalRoom": "204"},
-{"courseName": "CS", "courseNum": 594, "CRN": 34724, "classTime": " 12:00 PM T", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2TH", "finalRoom": "120"},
-{"courseName": "CS", "courseNum": 594, "CRN": 38551, "classTime": " 12:30 PM TR", "finalStart": new Date(2016,4,6,8,0,0,0), "finalEnd": new Date(2016,4,6,10,0,0,0), "finalLocation": "2SH", "finalRoom": "304"},
-{"courseName": "CS", "courseNum": 594, "CRN": 38839, "classTime": " 09:30 AM T", "finalStart": new Date(2016,4,4,10,30,0,0), "finalEnd": new Date(2016,4,4,12,30,0,0), "finalLocation": "", "finalRoom": ""}
+{"courseName": "CS", "courseNum": 100, "CRN": 17397, "classTime": "3:00 PM (MWF)","finalStart": new Date(2017,3,29,17,18,30,0), "finalEnd": new Date(2017,3,29,17,19,0,0), "finalLocation": "2BH", "finalRoom": "305"},
+{"courseName": "CS", "courseNum": 107, "CRN": 17412, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F001"},
+{"courseName": "CS", "courseNum": 109, "CRN": 19466, "classTime": "4:00 PM (MW)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2LCA", "finalRoom": "A001, 2LCB B101, 2LCD D001"},
+{"courseName": "CS", "courseNum": 110, "CRN": 40117, "classTime": "4:00 PM (MW)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2LCA", "finalRoom": "A001"},
+{"courseName": "CS", "courseNum": 111, "CRN": 34013, "classTime": "11:00 AM (TR)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
+{"courseName": "CS", "courseNum": 141, "CRN": 34447, "classTime": "4:00 PM (MW)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2SES", "finalRoom": "250"},
+{"courseName": "CS", "courseNum": 151, "CRN": 34014, "classTime": "2:00 PM (MWF)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCA", "finalRoom": "A001"},
+{"courseName": "CS", "courseNum": 201, "CRN": 17418, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SH", "finalRoom": "303"},
+{"courseName": "CS", "courseNum": 211, "CRN": 34456, "classTime": "10:00 AM (F)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCB", "finalRoom": "B101"},
+{"courseName": "CS", "courseNum": 251, "CRN": 34460, "classTime": "11:00 AM (MWF)","finalStart": new Date(2017,4,4,0,0,0,0), "finalEnd": new Date(2017,4,4,1,0,0,0), "finalLocation": "2LCD", "finalRoom": "D004"},
+{"courseName": "CS", "courseNum": 261, "CRN": 34463, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2BSB", "finalRoom": "250"},
+{"courseName": "CS", "courseNum": 301, "CRN": 17422, "classTime": "4:00 PM (MW)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2LCD", "finalRoom": "D002"},
+{"courseName": "CS", "courseNum": 341, "CRN": 34723, "classTime": "3:00 PM (MWF)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2LCA", "finalRoom": "A001"},
+{"courseName": "CS", "courseNum": 361, "CRN": 36306, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F001"},
+{"courseName": "CS", "courseNum": 362, "CRN": 36309, "classTime": "11:00 AM (TR)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2LCC", "finalRoom": "C004"},
+{"courseName": "CS", "courseNum": 385, "CRN": 17428, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
+{"courseName": "CS", "courseNum": 401, "CRN": 17454, "classTime": "11:00 AM (MWF)","finalStart": new Date(2017,4,4,0,0,0,0), "finalEnd": new Date(2017,4,4,1,0,0,0), "finalLocation": "2BH", "finalRoom": "317"},
+{"courseName": "CS", "courseNum": 401, "CRN": 20667, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SES", "finalRoom": "230"},
+{"courseName": "CS", "courseNum": 401, "CRN": 20665, "classTime": "11:00 AM (MWF)","finalStart": new Date(2017,4,4,0,0,0,0), "finalEnd": new Date(2017,4,4,1,0,0,0), "finalLocation": "2BH", "finalRoom": "317"},
+{"courseName": "CS", "courseNum": 401, "CRN": 17455, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SES", "finalRoom": "230"},
+{"courseName": "CS", "courseNum": 411, "CRN": 38550, "classTime": "9:00 AM (MWF)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2BH", "finalRoom": "317"},
+{"courseName": "CS", "courseNum": 411, "CRN": 38549, "classTime": "9:00 AM (MWF)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2BH", "finalRoom": "317"},
+{"courseName": "CS", "courseNum": 412, "CRN": 38114, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BH", "finalRoom": "208"},
+{"courseName": "CS", "courseNum": 412, "CRN": 38115, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BH", "finalRoom": "208"},
+{"courseName": "CS", "courseNum": 421, "CRN": 28653, "classTime": "6:00 PM (W)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BH", "finalRoom": "208"},
+{"courseName": "CS", "courseNum": 421, "CRN": 28654, "classTime": "6:00 PM (W)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BH", "finalRoom": "208"},
+{"courseName": "CS", "courseNum": 422, "CRN": 19650, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
+{"courseName": "CS", "courseNum": 422, "CRN": 20669, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
+{"courseName": "CS", "courseNum": 440, "CRN": 29904, "classTime": "12:00 PM (MWF)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F001"},
+{"courseName": "CS", "courseNum": 440, "CRN": 29905, "classTime": "12:00 PM (MWF)","finalStart": new Date(2017,4,2,0,0,0,0), "finalEnd": new Date(2017,4,2,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F001"},
+{"courseName": "CS", "courseNum": 442, "CRN": 33786, "classTime": "10:00 AM (MWF)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
+{"courseName": "CS", "courseNum": 442, "CRN": 33785, "classTime": "10:00 AM (MWF)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
+{"courseName": "CS", "courseNum": 450, "CRN": 17432, "classTime": "3:00 PM (MWF)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2BH", "finalRoom": "209"},
+{"courseName": "CS", "courseNum": 450, "CRN": 19163, "classTime": "3:00 PM (MWF)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2BH", "finalRoom": "209"},
+{"courseName": "CS", "courseNum": 466, "CRN": 26695, "classTime": "9:30 AM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCC", "finalRoom": "C003"},
+{"courseName": "CS", "courseNum": 466, "CRN": 26694, "classTime": "9:30 AM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCC", "finalRoom": "C003"},
+{"courseName": "CS", "courseNum": 469, "CRN": 19165, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCC", "finalRoom": "C001"},
+{"courseName": "CS", "courseNum": 469, "CRN": 17434, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LCC", "finalRoom": "C001"},
+{"courseName": "CS", "courseNum": 473, "CRN": 39849, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SES", "finalRoom": "238"},
+{"courseName": "CS", "courseNum": 473, "CRN": 39850, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SES", "finalRoom": "238"},
+{"courseName": "CS", "courseNum": 474, "CRN": 38617, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
+{"courseName": "CS", "courseNum": 474, "CRN": 38616, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
+{"courseName": "CS", "courseNum": 478, "CRN": 37634, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
+{"courseName": "CS", "courseNum": 478, "CRN": 37633, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
+{"courseName": "CS", "courseNum": 480, "CRN": 17438, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
+{"courseName": "CS", "courseNum": 480, "CRN": 19171, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
+{"courseName": "CS", "courseNum": 489, "CRN": 38327, "classTime": "11:00 AM (TR)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
+{"courseName": "CS", "courseNum": 489, "CRN": 38328, "classTime": "11:00 AM (TR)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
+{"courseName": "CS", "courseNum": 493, "CRN": 40119, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
+{"courseName": "CS", "courseNum": 493, "CRN": 40120, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
+{"courseName": "CS", "courseNum": 501, "CRN": 33788, "classTime": "11:00 AM (MWF)","finalStart": new Date(2017,4,4,0,0,0,0), "finalEnd": new Date(2017,4,4,1,0,0,0), "finalLocation": "2TH", "finalRoom": "216"},
+{"courseName": "CS", "courseNum": 502, "CRN": 23104, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2TH", "finalRoom": "117"},
+{"courseName": "CS", "courseNum": 511, "CRN": 17442, "classTime": "11:00 AM (MWF)","finalStart": new Date(2017,4,4,0,0,0,0), "finalEnd": new Date(2017,4,4,1,0,0,0), "finalLocation": "2SES", "finalRoom": "170"},
+{"courseName": "CS", "courseNum": 514, "CRN": 38618, "classTime": "10:00 AM (MWF)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SES", "finalRoom": "170"},
+{"courseName": "CS", "courseNum": 522, "CRN": 39385, "classTime": "12:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2ERF", "finalRoom": "2068"},
+{"courseName": "CS", "courseNum": 553, "CRN": 31243, "classTime": "2:00 PM (TR)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2LH", "finalRoom": "210"},
+{"courseName": "CS", "courseNum": 569, "CRN": 27021, "classTime": "11:00 AM (TR)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2LH", "finalRoom": "312"},
+{"courseName": "CS", "courseNum": 581, "CRN": 28655, "classTime": "2:00 PM (MW)","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2SES", "finalRoom": "170"},
+{"courseName": "CS", "courseNum": 583, "CRN": 0, "classTime": "","finalStart": new Date(2017,4,3,0,0,0,0), "finalEnd": new Date(2017,4,3,1,0,0,0), "finalLocation": "2SES", "finalRoom": "130"},
+{"courseName": "CS", "courseNum": 588, "CRN": 38552, "classTime": "3:00 PM (MW)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2SES", "finalRoom": "138"},
+{"courseName": "CS", "courseNum": 590, "CRN": 34836, "classTime": "3:30 PM (M)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2SES", "finalRoom": "170"},
+{"courseName": "CS", "courseNum": 594, "CRN": 33792, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SH", "finalRoom": "220"}
+
+
 ];
 	
 	$interval(function(){ $scope.$broadcast('timer-start'); }, 1000); // This is a HACK! :-(
@@ -63,6 +75,9 @@ app.controller('listingCtrl', function ($scope, $interval) {
 	];
 		$scope.stateText = function(input) {
 		if (input.finalStart > new Date()) {
+			console.log(input.finalStart);
+			console.log(">");
+			console.log(new Date());
 			return "Starts in: (" + moment(input.finalStart).format("h:mm A") + ")";
 		}else if (input.finalEnd < new Date()) {
 			return "Ended! (" + moment(input.finalStart).format("h:mm A") + " - " + moment(input.finalEnd).format("h:mm A") + ")";
@@ -83,6 +98,7 @@ app.controller('listingCtrl', function ($scope, $interval) {
 	}
 	$scope.startTimer = function (){
 		$scope.$broadcast('timer-start');
+		console.log($scope.mydata);
 	};
 	// Determines to give end date or beginning date in milliseconds
 	// Depends on if we are counting to the end of the final exam
