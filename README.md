@@ -8,3 +8,6 @@
 4) go to: acm.cs.uic.edu/~tchoh73/finals-dashboard/
 5) ???
 6) profit
+
+### questions?
+talk to Tim Choh or Chase Lee
