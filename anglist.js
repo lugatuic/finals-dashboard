@@ -49,18 +49,14 @@ app.controller('listingCtrl', function ($scope, $interval) {
 {"courseName": "CS", "courseNum": 588, "CRN": 38552, "classTime": "3:00 PM (MW)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2SES", "finalRoom": "138"},
 {"courseName": "CS", "courseNum": 590, "CRN": 34836, "classTime": "3:30 PM (M)","finalStart": new Date(2017,4,1,0,0,0,0), "finalEnd": new Date(2017,4,1,1,0,0,0), "finalLocation": "2SES", "finalRoom": "170"},
 {"courseName": "CS", "courseNum": 594, "CRN": 33792, "classTime": "3:30 PM (TR)","finalStart": new Date(2017,4,5,0,0,0,0), "finalEnd": new Date(2017,4,5,1,0,0,0), "finalLocation": "2SH", "finalRoom": "220"}
-
-
 ];
 	
 	$interval(function(){ $scope.$broadcast('timer-start'); }, 1000); // This is a HACK! :-(
 	$scope.model = [
 	];
-		$scope.stateText = function(input) {
+
+	$scope.stateText = function(input) {
 		if (input.finalStart > new Date()) {
-			console.log(input.finalStart);
-			console.log(">");
-			console.log(new Date());
 			return "Starts in: (" + moment(input.finalStart).format("h:mm A") + ")";
 		}else if (input.finalEnd < new Date()) {
 			return "Ended! (" + moment(input.finalStart).format("h:mm A") + " - " + moment(input.finalEnd).format("h:mm A") + ")";
@@ -79,10 +75,11 @@ app.controller('listingCtrl', function ($scope, $interval) {
 		}
 
 	}
+
 	$scope.startTimer = function (){
 		$scope.$broadcast('timer-start');
-		console.log($scope.mydata);
 	};
+	
 	// Determines to give end date or beginning date in milliseconds
 	// Depends on if we are counting to the end of the final exam
 	// or the beginning of the final examination.
@@ -104,10 +101,8 @@ app.controller('listingCtrl', function ($scope, $interval) {
 		}
 		// 3 cases
 		for (i = 0; i < $scope.model.length; i++) {
-			console.log("model id: " + $scope.model[i].id + ", ID just callbacked: " + id);
 			if ($scope.model[i].id == id) {
 				if (curData.finalEnd > new Date()) { // We are taking the exam.
-					console.log("Entering exam!: " + id);
 					$scope.model[i].timedur = $scope.timedur(curData);
 					$scope.model[i].stateText = $scope.stateText(curData);
 					$scope.model[i].color = $scope.colorstatus(curData);
@@ -125,12 +120,12 @@ app.controller('listingCtrl', function ($scope, $interval) {
 		console.log('Exam finished!: ' + id);
 		}
 	}
-//	$scope.$broadcast('timer-start');
-for(i = 0; i < $scope.mydata.length; i++) {
-	if ($scope.mydata[i].finalEnd > new Date()) {
-//	if (true) {
-		$scope.model.push({"courseName": $scope.mydata[i].courseName, "courseNum": $scope.mydata[i].courseNum, "finalLocation": $scope.mydata[i].finalLocation, "finalRoom": $scope.mydata[i].finalRoom, "stateText": $scope.stateText($scope.mydata[i]), "timedur": $scope.timedur($scope.mydata[i]), "id": $scope.mydata[i].CRN, "color": $scope.colorstatus($scope.mydata[i]) });
-	}
+	//	$scope.$broadcast('timer-start');
+	for(i = 0; i < $scope.mydata.length; i++) {
+		if ($scope.mydata[i].finalEnd > new Date()) {
+	//	if (true) {
+			$scope.model.push({"courseName": $scope.mydata[i].courseName, "courseNum": $scope.mydata[i].courseNum, "finalLocation": $scope.mydata[i].finalLocation, "finalRoom": $scope.mydata[i].finalRoom, "stateText": $scope.stateText($scope.mydata[i]), "timedur": $scope.timedur($scope.mydata[i]), "id": $scope.mydata[i].CRN, "color": $scope.colorstatus($scope.mydata[i]) });
+		}
 	}
 
 });
