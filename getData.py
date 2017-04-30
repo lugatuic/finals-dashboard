@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 
 
 formatstring = '{{"courseName": "{}", "courseNum": {}, "CRN": {}, "classTime": " {}", "finalStart": new Date({},{},{},{},{},0,0), "finalEnd": new Date({},{},{},{},{},0,0), "finalLocation": "{}", "finalRoom": "{}"}},'
+formatstring2 = '{{"courseName": "{}", "courseNum": {}, "CRN": {}, "classTime": " {}", "finalStart": new Date({},{},{},{},{},0,0), "finalEnd": new Date({},{},{},{},{},0,0), "finalLocation": "{}", "finalRoom": "{}"}}'
 
 with open(sys.argv[1], 'r') as infile:
     reader = csv.reader(infile, delimiter=',', quotechar='"')
