@@ -1,5 +1,5 @@
-# UIC Finals Dashboard
-###steps for next semester setup:
+# UIC Finals dashboard
+### steps for next semester setup:
 1) download and save a csv from https://registrar.uic.edu/current_students/calendars/final-exams
 2) run 'python3 getData.py [file.csv] > temp.txt
 3) TODO: automate this process
