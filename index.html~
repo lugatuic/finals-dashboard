@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+		<script src="angular-timer.min.js" charset="utf-8"></script>
+		<script src="moment-with-locales.js" charset="utf-8"></script>
+		<script src="readable-range.js" charset="utf-8"></script>
+		<script src="humanize-duration.js" charset="utf-8"></script>
+		<script src="anglist.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body ng-app="finalscountdown">
+		<!-- Non-standard blocks -->
+		<div class="classenclosed large">
+				<div class="classhighlight pending large">
+					<h1>Spring 2017 Graduation</h1>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<!--<h1>Congratulations, You made it!</h1>-->
+					<h1><timer end-time="1494097200000" max-time-unit="'hour'" interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}</timer></h1>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+
+
+
+		<div ng-controller="listingCtrl">
+			<div class="classenclosed" ng-repeat="$item in model |  orderBy: ['courseNum','timedur'] ">
+				<div class="classhighlight" ng-class="$item.color">
+					<h1>{{$item.courseName}}</h1>
+					<h3>{{$item.courseNum}}</h3>
+				</div><!-- classhighlight -->
+				<div class="classinfo">
+					<p>{{$item.stateText}}</p>
+					<h2><timer end-time="$item.timedur" max-time-unit="'hour'" interval="1000" finish-callback="timerfinished($item.id)">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}</timer></h2>
+				</div><!-- classinfo -->
+			</div><!-- classenclosed -->
+<button ng-click="startTimer()" ng-disabled="timerRunning">Start Timers</button>
+
+		</div>
+		<!-- <script src="main-nonsage.js" charset="utf-8"></script> -->
+	</body>
+</html>
