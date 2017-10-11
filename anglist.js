@@ -36,6 +36,7 @@ app.controller('listingCtrl', function ($scope, $interval) {
 {"courseName": "CS", "courseNum": 478, "CRN": 37634, "classTime": " 3:30 PM (TR)", "finalStart": new Date(2017,4,5,13,00,0,0), "finalEnd": new Date(2017,4,5,15,00,0,0), "finalLocation": "2BSB", "finalRoom": "145"},
 {"courseName": "CS", "courseNum": 480, "CRN": 17438, "classTime": " 3:30 PM (TR)", "finalStart": new Date(2017,4,5,13,00,0,0), "finalEnd": new Date(2017,4,5,15,00,0,0), "finalLocation": "2LCF", "finalRoom": "F004"},
 {"courseName": "CS", "courseNum": 489, "CRN": 38327, "classTime": " 11:00 AM (TR)", "finalStart": new Date(2017,4,1,10,30,0,0), "finalEnd": new Date(2017,4,1,12,30,0,0), "finalLocation": "2ERF", "finalRoom": "2068 "},
+{"courseName": "CS", "courseNum": 491, "CRN": 40112, "classTime": " 3:30 PM (TR)", "finalStart": new Date(2017,4,5,13,00,0,0), "finalEnd": new Date(2017,4,5,15,00,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
 {"courseName": "CS", "courseNum": 493, "CRN": 40119, "classTime": " 3:30 PM (TR)", "finalStart": new Date(2017,4,5,13,00,0,0), "finalEnd": new Date(2017,4,5,15,00,0,0), "finalLocation": "2LCF", "finalRoom": "F006"},
 {"courseName": "CS", "courseNum": 501, "CRN": 33788, "classTime": " 11:00 AM (MWF)", "finalStart": new Date(2017,4,4,10,30,0,0), "finalEnd": new Date(2017,4,4,12,30,0,0), "finalLocation": "2TH", "finalRoom": "216"},
 {"courseName": "CS", "courseNum": 502, "CRN": 23104, "classTime": " 2:00 PM (TR)", "finalStart": new Date(2017,4,3,15,30,0,0), "finalEnd": new Date(2017,4,3,17,30,0,0), "finalLocation": "2TH", "finalRoom": "117"},
