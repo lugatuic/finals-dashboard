@@ -50,5 +50,5 @@ with open(sys.argv[1], 'r') as infile:
             endmintemp = end[1].split(" ")
             endmin = endmintemp[0]
 
-            print(formatstring.format(courseName, courseNum, crn, classTime, 2017, 4, day[2], starthour, startmin, 2017, 4, day[2], endhour, endmin, building, room))
+            print(formatstring.format(courseName, courseNum, crn, classTime, 2017, 11, day[2], starthour, startmin, 2017, 11, day[2], endhour, endmin, building, room))
             #print(", ".join((courseName, courseNum, crn, classTime, building, room, str(starthour), str(startmin), str(endhour), str(endmin))))
