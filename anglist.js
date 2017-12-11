@@ -4,7 +4,7 @@ app.controller('listingCtrl', function ($scope, $interval) {
 
 	$scope.mydata = [
 //{"courseName": "CS", "courseNum": 107, "CRN": "10634", "classTime": "4:0PM MWF", "finalStart": new Date(2015,11,7,3,30,0,0), "finalEnd": new Date(2015,11,7,5,30,0,0), "finalLocation": "2LCC", "finalRoom": "C3"},
-{"courseName": "CS", "courseNum": 10, "CRN": 0, "classTime": " 1:0 PM (MWF)", "finalStart": new Date(2017,11,11,13,0,0,0), "finalEnd": new Date(2017,11,11,15,0,0,0), "finalLocation": "2BSB", "finalRoom": "140"},
+{"courseName": "CS", "courseNum": 100, "CRN": 0, "classTime": " 1:0 PM (MWF)", "finalStart": new Date(2017,11,11,13,0,0,0), "finalEnd": new Date(2017,11,11,15,0,0,0), "finalLocation": "2BSB", "finalRoom": "140"},
 {"courseName": "CS", "courseNum": 107, "CRN": 0, "classTime": " 3:30 PM (TR)", "finalStart": new Date(2017,11,15,13,0,0,0), "finalEnd": new Date(2017,11,15,15,0,0,0), "finalLocation": "2LCC", "finalRoom": "C04"},
 {"courseName": "CS", "courseNum": 109, "CRN": 0, "classTime": " 4:0 PM (MW)", "finalStart": new Date(2017,11,12,15,30,0,0), "finalEnd": new Date(2017,11,12,17,30,0,0), "finalLocation": "2BSB", "finalRoom": "250"},
 {"courseName": "CS", "courseNum": 111, "CRN": 0, "classTime": " 12:30 PM (TR)", "finalStart": new Date(2017,11,15,8,0,0,0), "finalEnd": new Date(2017,11,15,10,0,0,0), "finalLocation": "2LCC", "finalRoom": "C03"},
