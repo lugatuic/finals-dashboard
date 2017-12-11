@@ -77,7 +77,7 @@ app.controller('listingCtrl', function ($scope, $interval) {
 
 	$scope.stateText = function(input) {
 		if (input.finalStart > new Date()) {
-			return "Starts at: (" + moment(input.finalStart).format("h:mm A") + ")";
+			return "Starts in: (" + moment(input.finalStart).format("h:mm A") + ")";
 		}else if (input.finalEnd < new Date()) {
 			return "Ended! (" + moment(input.finalStart).format("h:mm A") + " - " + moment(input.finalEnd).format("h:mm A") + ")";
 		} else {
